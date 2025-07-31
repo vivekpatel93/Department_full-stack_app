@@ -1,3 +1,20 @@
-CREATE TABLE PRODUCT(
-id number(6) PRIMARY KEY, cost number(1,15), category varchar(20), name varchar(60),brand char(2), retail_price number(5,10), department char(10), sku varchar(50), distribution_center_id number(1)
+// QUERY TO CREATE TABLE
+CREATE TABLE PRODUCT (
+    id NUMBER(6) PRIMARY KEY,
+    cost NUMBER(15,6), -- Total 15 digits, 6 after decimal
+    category VARCHAR2(20),
+    name VARCHAR2(60),
+    brand CHAR(2),
+    retail_price NUMBER(10,2), -- Total 10 digits, 2 after decimal
+    department CHAR(10),
+    sku VARCHAR2(50),
+    distribution_center_id NUMBER(5)
 );
+// QUERY TO INSERT THE DATA
+INSERT INTO PRODUCT (
+    id, cost, category, name, brand, retail_price, department, sku, distribution_center_id
+) VALUES (
+    13842, 2.518749990849756, 'Accessories', 'Low_Profile_Dyed_Cotton_Twill_Cap_Navy_W39S55D', 'MG', 6.25, 'Women', 'EBD58B8A3F1D72F4206201DA62FB1204', 1
+);
+// QUERY TO FETACH THE DATA
+SELECT * FROM PRODUCT;
